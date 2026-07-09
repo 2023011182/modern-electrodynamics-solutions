@@ -1,0 +1,45 @@
+\numberwithin{equation}{chapter}
+
+\newcommand{\dd}{\mathop{}\!\mathrm{d}}
+\newcommand{\ee}{\mathrm{e}}
+\newcommand{\ii}{\mathrm{i}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\vct}[1]{\bm{#1}}
+\newcommand{\uvct}[1]{\hat{\bm{#1}}}
+\newcommand{\avg}[1]{\left\langle #1 \right\rangle}
+\newcommand{\absq}[1]{\left| #1 \right|^2}
+
+\newtheorem{theorem}{定理}[chapter]
+\newtheorem{lemma}{引理}[chapter]
+
+\newtcolorbox{problemBox}[2][]{
+  enhanced,
+  breakable,
+  colback=gray!3,
+  colframe=gray!45,
+  title={#2},
+  fonttitle=\bfseries,
+  #1
+}
+
+\newenvironment{thinking}[1]
+  {\begin{problemBox}{思考题 #1}}
+  {\end{problemBox}}
+
+\newenvironment{exercise}[1]
+  {\begin{problemBox}{习题 #1}}
+  {\end{problemBox}}
+
+\newenvironment{solution}
+  {\par\noindent\textbf{解}\quad}
+  {\par}
+
+\newenvironment{remarkBox}
+  {\begin{tcolorbox}[breakable,colback=blue!2,colframe=blue!35,title={说明},fonttitle=\bfseries]}
+  {\end{tcolorbox}}
+
+\newenvironment{formula}
+  {\begin{tcolorbox}[breakable,colback=green!2,colframe=green!35,title={公式},fonttitle=\bfseries]}
+  {\end{tcolorbox}}
+
+\newcommand{\todoanswer}{\textcolor{red!70!black}{待补充。}}
